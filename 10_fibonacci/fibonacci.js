@@ -1,30 +1,17 @@
 const fibonacci = function(InputNumber) {
-  let FibonacciArray = [];
+  if (InputNumber < 0) {
+    return "OOPS"
+  } else {
+    let NumberArray = [1, 1];
 
-  let OriginalNumber = InputNumber;
-  let firstNumber = (OriginalNumber -1);
-  let secondNumber = (OriginalNumber -2);
-  let iteration = InputNumber;
-  for (iteration; iteration <= 100; iteration++) {
-    // if (firstNumber <= 0) {
-    //   firstNumber = 0;
-    // };
-    // if (secondNumber <= 0) {
-    //   secondNumber = 0;
-    // ;}
-    if (inputNumber == 1) {
-      firstNumber = 0;
-      secondNumber = 1;
-    }
-    let FibonacciNumber = firstNumber + secondNumber;
-    FibonacciArray.push(FibonacciNumber)
-    console.log(FibonacciNumber);
+    for (let i = 0; i <= InputNumber; i++) {
+      NumberArray.push((NumberArray[NumberArray.length - 1]
+      + NumberArray[NumberArray.length - 2]));
+    };
+    NumberArray.unshift(0);
+    return NumberArray[InputNumber];
   };
-  console.log(FibonacciArray)
-  return FibonacciArray
 };
 
-fibonacci(1);
-
 // Do not edit below this line
-// module.exports = fibonacci;
+module.exports = fibonacci;
