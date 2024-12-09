@@ -15,12 +15,14 @@ const subtract = function(...subtractedItems) {
   return total;
 };
 
-const sum = function(...addedItems) {
+const sum = function(...summedItems) {
   let total = 0;
-  for (let item of addedItems) {
-    total += item;
+  for (let array of summedItems) {
+    for (let item of array) {
+      total += item;
   }
   return total;
+};
 };
 
 const multiply = function() {
