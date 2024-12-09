@@ -25,17 +25,35 @@ const sum = function(...summedItems) {
 };
 };
 
-const multiply = function() {
-
+const multiply = function(...multipliedItems) {
+  let total = 1;
+  for (let array of multipliedItems) {
+  for (let item of array) {
+    total *= item;
+  }
+  return total;
+  };
 };
 
-const power = function() {
-
+const power = function(...powerItems) {
+  let total = Math.pow(powerItems[0], powerItems[1])
+  return total;
 };
 
-const factorial = function() {
-
+const factorial = function(number) {
+  let total = 1;
+  if (number == 0) {
+    total = 1;
+  } else {
+    total = 1;
+    for (number; number > 0; number--) {
+      total *= number;
+    };
+  };
+  return total;
 };
+
+factorial(2);
 
 // Do not edit below this line
 module.exports = {
